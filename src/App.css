@@ -1,0 +1,30 @@
+@import './components/Home.css';
+@import './components/Projects.css';
+@import './components/Contact.css';
+@import './components/Navbar.css';
+@import './components/Experience.css';
+@import './components/Gallery.css';
+@import './components/Skills.css';
+
+
+/* App.css */
+
+html, body, #root {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+}
