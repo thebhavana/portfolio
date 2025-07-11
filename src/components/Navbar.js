@@ -1,12 +1,19 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Navbar.css';
 
 function Navbar() {
+    const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
     return (
         <nav className="navbar">
             <div className="navbar-container">
                 <h1 className="logo">Bhawana Kumar</h1>
-                <ul className="nav-links">
+
+                <div className="menu-toggle" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
+                    ☰
+                </div>
+
+                <ul className={`nav-links ${isMobileMenuOpen ? 'active' : ''}`}>
                     <li><a href="#home">Home</a></li>
                     <li><a href="#gallery">Gallery</a></li>
                     <li><a href="#skills">Skills</a></li>
